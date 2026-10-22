@@ -82,3 +82,40 @@ fun FormIsian(
                 color = Color.Red
             )
 
+            // Jenis kelamin (radio button sejajar, selebar kolom)
+            Row(
+                modifier = Modifier.width(250.dp),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                jenisK.forEach { item ->
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected = gender == item,
+                            onClick = { gender = item }
+                        )
+                        Text(text = item)
+                    }
+                }
+            }
+
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(all = 20.dp)
+                    .width(250.dp),
+                thickness = 1.dp,
+                color = Color.Red
+            )
+
+            // Alamat
+            OutlinedTextField(
+                value = alamat,
+                onValueChange = { alamat = it },
+                singleLine = true,
+                label = { Text(text = "Alamat") },
+                modifier = Modifier.width(250.dp)
+            )
+
+            Spacer(modifier = Modifier.height(30.dp))
+
+ 
