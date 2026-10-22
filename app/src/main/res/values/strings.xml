@@ -6,4 +6,5 @@
     <string name="jenis_kelamin"> Jenis Kelamin</string>
     <string name="alamat"> Alamat</string>
     <string name="tampil"> Tampilkan Data</string>
+    <string name="home"> Form Isian</string>
 </resources>
